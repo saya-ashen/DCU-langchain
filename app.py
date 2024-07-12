@@ -13,3 +13,5 @@ gpu_llm = HuggingFacePipeline.from_model_id(
 gpu_chain = prompt | gpu_llm
 question = "What is electroencephalography?"
 print(gpu_chain.invoke({"question": question}))
+
+# 
