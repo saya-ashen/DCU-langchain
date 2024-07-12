@@ -28,12 +28,12 @@ jobs:
         id: date
         run: echo "today=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
       -
-        name: Build and push DCU-langchain
+        name: Build and push dcu-langchain
         uses: docker/build-push-action@v6
         with:
           context: .
           file: .Dockerfile
           push: true
           tags: |
-            yidhra/DCU-langchain:latest
-            yidhra/DCU-langchain:${{ env.today }}
+            yidhra/dcu-langchain:latest
+            yidhra/dcu-langchain:${{ env.today }}
